@@ -5,9 +5,11 @@
 # Compiled source #
 *.class
 *.dll
+/out
 
 # Reports #
 /target
+/build
 
 # Logs and databases #
 *.log

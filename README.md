@@ -18,7 +18,8 @@
 ## Running the tests
 
 * Download project - git clone https://github.com/KarinReid/learningAutomation.git
-* Execute via command line : mvn test -Dtest=(insertTestName)
+* Execute via command line :
+    JUnit tests -> gradle test --tests *NameOfTest
 
 
 ## Framework
