@@ -4,7 +4,7 @@ apply plugin: 'maven'
 group = 'learningAutomation'
 version = '1.0.0-SNAPSHOT'
 
-description = """"""
+description = """Learning Automation"""
 
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
@@ -22,4 +22,5 @@ dependencies {
     testCompile group: 'io.cucumber', name: 'cucumber-java', version:'2.3.1'
     testCompile group: 'io.cucumber', name: 'cucumber-junit', version:'2.3.1'
     testCompile group: 'junit', name: 'junit', version:'4.12'
+    testCompile group: 'org.seleniumhq.selenium', name: 'selenium-chrome-driver', version:'3.9.1'
 }
