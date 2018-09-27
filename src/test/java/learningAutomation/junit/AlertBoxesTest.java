@@ -31,7 +31,7 @@ public class AlertBoxesTest {
         WebElement showAlertBox = driver.findElement(By.cssSelector("#alertexamples"));
         showAlertBox.click();
         assertEquals("Expected alert box message", "I am an alert box!", driver.switchTo().alert().getText());
-        driver.switchTo().alert().accept(); // Clicks on the OK button
+        driver.switchTo().alert().accept();
 
     }
 
@@ -40,7 +40,7 @@ public class AlertBoxesTest {
         WebElement confirmBox = driver.findElement(By.cssSelector("#confirmexample"));
         confirmBox.click();
         assertEquals("Expected confirm box message", "I am a confirm alert", driver.switchTo().alert().getText());
-        driver.switchTo().alert().dismiss(); // Clicks on cancel button
+        driver.switchTo().alert().dismiss();
         assertFalse(driver.findElement(By.cssSelector("#confirmreturn")).getText(), false); // Assert cancel button has been clicked
     }
 
@@ -52,7 +52,6 @@ public class AlertBoxesTest {
         assertEquals("Expected prompt box message", "I prompt you", driver.switchTo().alert().getText());
         driver.switchTo().alert().sendKeys(msg);
         driver.switchTo().alert().accept();
-        //driver.findElement(By.cssSelector("#promptreturn")).getText();
         assertEquals("Expected message", msg, driver.findElement(By.cssSelector("#promptreturn")).getText());
     }
 
