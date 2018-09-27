@@ -4,8 +4,10 @@
 
 * Learn Java and selenium, utilising Alan Richardson's course (see Credits)
 * Incorporate tools / frameworks in order to practice what I am learning on current projects. These include:
-    -   &#9989; Gherkin (Cucumber archetype required)
+    -   &#9989; JUnit tests (initially but switching) to Cucumber - in progress
+    -   &#9989; Cucumber archetype required for switching to Cucumber from JUnit
     -   &#9989; Maven (initially but switching) to Gradle
+    -   Gherkin
     -   Logging
     -   Page Object model
     -   Page Factory
