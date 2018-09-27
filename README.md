@@ -18,14 +18,14 @@
 ## Running the tests
 
 * Download project - git clone https://github.com/KarinReid/learningAutomation.git
-* Execute via command line : mvn test -Dtest=<insertTestName>
+* Execute via command line : mvn test -Dtest=(insertTestName)
 
 
 ## Framework
 
 In order to support the above goals, this Framework will change accordingly.
 * [Maven](https://maven.apache.org/) - Dependency Management & Build tool.
-* [Gradle](https://gradle.org/install/)
+* [Gradle](https://gradle.org/install/) - Dependency Manager & Build tool.
 * [Java](https://docs.oracle.com/javase/8/docs/technotes/guides/install/install_overview.html) - JDK & JRE.
 * [Log4j2 - logger]
 
