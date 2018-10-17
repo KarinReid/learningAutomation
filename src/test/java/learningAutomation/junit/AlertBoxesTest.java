@@ -1,5 +1,7 @@
 package learningAutomation.junit;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
@@ -16,23 +18,26 @@ public class AlertBoxesTest {
 
     static WebDriver driver;
     final private String ALERT_PAGE_URL = "https://www.compendiumdev.co.uk/selenium/alerts.html";
+    private static Logger logger = LogManager.getLogger(AlertBoxesTest.class);
 
     @BeforeClass
     public static void setupDriver() {
+
         driver = new ChromeDriver();
+        logger.info("Starting up the driver");
     }
 
     @Before
     public void setupPage() {
         driver.get(ALERT_PAGE_URL);
     }
+
     @Test
     public void alertBox() {
         WebElement showAlertBox = driver.findElement(By.cssSelector("#alertexamples"));
         showAlertBox.click();
         assertEquals("Expected alert box message", "I am an alert box!", driver.switchTo().alert().getText());
         driver.switchTo().alert().accept();
-
     }
 
     @Test
@@ -57,7 +62,9 @@ public class AlertBoxesTest {
 
     @AfterClass
     public static void tearDownDriver() {
+
         driver.quit();
+        logger.info("Shutting down the driver");
     }
 
 }
