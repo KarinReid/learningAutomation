@@ -8,7 +8,7 @@
     -   &#9989; Cucumber archetype required (for switching from JUnit to Gherkin)
     -   &#9989; Maven (initially but switching) to Gradle
     -   Gherkin
-    -   Logging
+    -   &#9989; Logging
     -   Page Object model
     -   Page Factory
     -   Jenkinsfile (for multibranch pipelines)
