@@ -1,6 +1,8 @@
 package learningAutomation.junit;
 
 import cucumber.api.java.After;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -15,6 +17,7 @@ public class CookiesTest {
 
     WebDriver driver;
     String searchPage = "http://compendiumdev.co.uk/selenium/search.php";
+    private static Logger logger = LogManager.getLogger(CookiesTest.class);
 
     @FindBy(css = "input[type='submit'][value='Search']")
     private WebElement searchButton;
@@ -55,6 +58,15 @@ public class CookiesTest {
         aNewCookie.domain("www.mydomain.com");
         Assert.assertTrue("Should be a new cookie created", aNewCookie != null);
         // TODO: Not happy that this is working. Cannot see a new cookie in Application > cookies
+    }
+
+    @Test
+    public void getCookieSearchNumVisits() {
+        // Test 1
+        driver.navigate().to(searchPage);
+        Cookie browserCookie = driver.manage().getCookieNamed("seleniumSimplifiedSearchNumVisits");
+        Assert.assertEquals("Should only be 1 number of visits", "1", browserCookie.getValue());
+        driver.manage().deleteAllCookies();
     }
 
     @After
