@@ -15,7 +15,6 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.safari.SafariDriver;
 
-import java.io.File;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Map;
@@ -33,7 +32,7 @@ public class Driver extends Thread{
     private static WebDriver aDriver=null;
     private static long browserStartTime = 0L;
     private static long savedTimecount = 0L;
-    public static final long DEFAULT_TIMEOUT_SECONDS = 10;
+    //public static final long DEFAULT_TIMEOUT_SECONDS = 10;
     private static boolean avoidRecursiveCall=false;
     public static final String BROWSER_PROPERTY_NAME = "selenium2basics.webdriver";
 
